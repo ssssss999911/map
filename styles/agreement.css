@@ -1,0 +1,29 @@
+/* ==================== 이용약관 ==================== */
+
+main h2 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--black-3);
+}
+
+.agreement,
+.privacy {
+  background-color: var(--white-f9);
+  padding: 20px;
+  color: var(--black-3);
+}
+
+.privacy pre {
+  white-space: pre-wrap;
+}
+
+.agreement p:not(:last-child) {
+  text-align: justify;
+  word-break: break-all;
+  margin-bottom: 10px;
+}
+
+/* ==================== 이용약관 종료 ==================== */

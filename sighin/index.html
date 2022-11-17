@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/sighin.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <script defer type="module" src="./login.js"></script>
+
+  <title>로그인 | KALL</title>
+
+  <style>
+    p.pass_message {
+      text-align: left;
+      color: red;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- ==================== 수진 코드 ==================== -->
+    <div class="login_page">
+      <form action="./complete.html" name="customer_login">
+
+        <section class="login">
+          <h2>로그인</h2>
+
+          <div class="login_ID">
+            <input type="text" name="customer_ID" placeholder="아이디" required>
+          </div>
+          <div class="login_password">
+            <input type="password" name="customer_password" placeholder="비밀번호" minlength="7" required>
+            <p class="pass_message"></p>
+          </div>
+
+          <div class="save_ID">
+            <label>
+              <input type="checkbox" name="save_ID" value="save_ID"> 아이디 저장
+              <!-- 저장 가능할 시  -->
+            </label>
+            <label>
+              <input type="checkbox" name="auto_login" value="auto_login"> 자동 로그인
+            </label>
+          </div>
+
+          <button class="login_submit" type="button">로그인</button>
+        </section>
+
+        <div class="find_info">
+          <a class="find_ID" href="./id_find.html">아이디 찾기</a>
+          <a class="find_passwoard" href="./password_find.html">비밀번호 찾기</a>
+          <a class="join" href="../sighup/">회원가입</a>
+        </div>
+      </form>
+
+      <!-- ===============SNS 로그인 가능시 ==================================================== -->
+
+      <section class="join_sns">
+        <h3>SNS로 간편하게 로그인하세요.</h3>
+        <a href="">카카오 간편 로그인</a>
+      </section>
+      <!-- 기능 구현 가능 시  -->
+
+      <!--===================== 비회원 주문 조회  ================================================= -->
+
+      <h3 class="login-question">
+        <a href="../community/guide/">로그인에 문제가 있으신가요?</a>
+      </h3>
+      <!-- Q&A로 연결 -->
+
+      <section class="unknown_customer">
+        <input type="checkbox" id="toggle-button" hidden>
+        <label for="toggle-button" class="find_unknown_order">비회원 주문 조회하기</label>
+        <form action="#" name="find_unknown_order" class="unknown_login">
+          <div class="unknown_login_orderNum">
+            <input type="text" name="orderNum" placeholder="주문번호" required>
+          </div>
+          <div class="unknown_login_email">
+            <input type="email" name="customer_email" placeholder="이메일" required>
+          </div>
+          <div class="unknown_login_phone_number">
+            <input type="text" name="customer_phone_number" minlength="11" placeholder="핸드폰 번호" required>
+          </div>
+
+          <button class="order_submit" type="submit">주문조회
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="../agreement">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

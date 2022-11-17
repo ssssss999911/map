@@ -1,0 +1,145 @@
+/* ==================== 메인 ==================== */
+
+:root {
+  --button-width: 70px;
+  --button-posx: -70px;
+}
+
+main {
+  width: 1280px;
+  margin: 0 auto;
+  color: var(--black-3);
+}
+
+.image-container {
+  margin-top: -75px;
+  margin-bottom: 50px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.image {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image.first {
+  background-color: cadetblue;
+}
+
+.image.first img {
+  width: 100%;
+  height: 600px;
+}
+
+.image.second {
+  background-color: darkcyan;
+}
+
+.image.third {
+  background-color: greenyellow;
+}
+
+.slide-button {
+  position: absolute;
+  top: calc((100% - var(--button-width)) / 2);
+  border-radius: 50%;
+  width: var(--button-width);
+  height: var(--button-width);
+  line-height: var(--button-width);
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slide-button.next {
+  right: calc(var(--button-posx) / 2);
+}
+
+.slide-button.prev {
+  left: calc(var(--button-posx) / 2);
+}
+
+.slide-button i {
+  color: #333333;
+}
+
+main section h2 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+main section .item-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+main section .item-list .item {
+  border: 2px solid var(--white-e);
+  box-sizing: border-box;
+  padding: 10px;
+  width: calc((100% - 60px)*.3333);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main section .item-list .item:hover {
+  border: 2px solid var(--c-point-h);
+}
+
+.item .item-image {
+  color: var(--white-f);
+  font-size: 2rem;
+  text-align: center;
+  line-height: 350px;
+  background-color: var(--black-3);
+  margin-bottom: 10px;
+}
+
+.item .item-image a {
+  display: block;
+  color: white;
+}
+
+.item .item-image img {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+.item p {
+  margin: 10px 0;
+}
+
+.item .item-name strong {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.item .item-name a {
+  color: var(--c-link);
+}
+
+.item .item-name a:hover {
+  color: var(--c-link-h);
+  text-decoration: underline;
+}
+
+.item .item-rating {
+  color: var(--c-point-h);
+}
+
+.item .item-rating .rating-number {
+  color: var(--black-3);
+}
+
+/* ==================== 메인 종료 ==================== */

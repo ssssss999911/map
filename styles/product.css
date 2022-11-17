@@ -1,0 +1,172 @@
+/* ==================== 상품 리스트 ==================== */
+main {
+  color: var(--black-3);
+  font-size: 1.2rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--black-3);
+}
+
+/* ==================== 태그 선택 목록 ==================== */
+main div.option-tags {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+main div.option-tags details[open] {
+  margin-bottom: 100px;
+}
+
+main div.option-tags summary {
+  background-color: var(--white-f9);
+  padding: 10px;
+  cursor: pointer;
+  /* ==================== NOTE: 임시로 숨겨둠 ==================== */
+  display: none;
+}
+
+main div.option-tags summary::after {
+  content: ' 열기';
+}
+
+main div.option-tags details[open] summary::after {
+  content: ' 닫기';
+}
+
+main div.option-tags p {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+main div.option-tags div.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+div.tags input+label {
+  background-color: var(--c-point3);
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+div.tags input+label:hover {
+  background-color: var(--c-point3-h);
+}
+
+div.tags input:checked+label {
+  background-color: var(--c-point3-h);
+  color: var(--black-3);
+}
+
+main div.option-tags button {
+  all: unset;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 10px 20px;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  cursor: pointer;
+}
+
+main div.option-tags button:hover {
+  background-color: var(--c-point-h);
+  color: white;
+}
+
+/* ==================== 상품 목록 ==================== */
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 1.2rem;
+
+  text-align: center;
+}
+
+.item {
+  width: calc((100% - 60px)*.3333);
+  padding: 10px;
+  border: 2px solid var(--white-e);
+  box-sizing: border-box;
+}
+
+.item:hover {
+  border-color: var(--c-point-h);
+}
+
+.item .item-name a {
+  color: var(--c-link);
+}
+
+.item .item-name a:hover {
+  color: var(--c-link-h);
+  text-decoration: underline;
+}
+
+.item .item-name strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.item>p {
+  margin: 10px 0;
+}
+
+.item .item-image a {
+  background-color: var(--black-3);
+  display: block;
+  height: 350px;
+  line-height: 350px;
+  font-size: 2rem;
+  color: white;
+}
+
+.item .item-image img {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+.item .item-rating {
+  color: var(--c-point-h);
+}
+
+.item .item-rating .rating-number {
+  color: var(--black-3);
+}
+
+/* ==================== 정렬 필터 ==================== */
+div.align-filter {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+div.align-filter input+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--white-f9);
+  cursor: pointer;
+  line-height: 25px;
+}
+
+div.align-filter input+label:hover {
+  background-color: var(--white-e);
+}
+
+div.align-filter input:checked+label {
+  background-color: var(--c-point-h);
+  color: white;
+}

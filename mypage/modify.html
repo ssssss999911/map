@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/mypage.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <title>본인 확인 | KALL</title>
+
+  <style>
+    main {
+      width: 600px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333333;
+    }
+
+    main>p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    main fieldset {
+      border: none;
+    }
+
+    main fieldset>div {
+      display: flex;
+      align-items: center;
+    }
+
+    main fieldset>div:nth-of-type(1) {
+      margin-bottom: 5px;
+    }
+
+    main fieldset>div :nth-child(1) {
+      width: 120px;
+    }
+
+    main fieldset>div div:nth-child(2) {
+      padding: 10px;
+    }
+
+    main fieldset>div input:nth-child(2) {
+      all: unset;
+      background-color: var(--white-f9);
+      padding: 10px;
+      flex: 1;
+    }
+
+    main div.buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    main div.buttons button {
+      all: unset;
+      background-color: var(--c-point);
+      color: var(--black-3);
+      padding: 20px 10px;
+      width: 120px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    main div.buttons button:hover {
+      background-color: var(--c-point-h);
+      color: var(--white-f);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <h2>본인 확인</h2>
+    <p>회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인해 주세요.</p>
+
+    <form action="./pmodify.html">
+      <fieldset>
+        <div>
+          <div class="label">아이디</div>
+          <div class="content">kingtaehyeon1004</div>
+        </div>
+        <div>
+          <label for="findPassword">비밀번호</label>
+          <input type="password" name="findPassword" id="findPassword" minlength="7" required>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="button">취소</button>
+        <button type="submit">인증하기</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="../agreement/">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

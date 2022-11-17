@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/order.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <title>주문 완료 | KALL</title>
+
+  <style>
+    main {
+      color: var(--black-3);
+      font-size: 1.2rem;
+    }
+
+    main>p {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 60px 0;
+    }
+
+    main div.order-complete {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      gap: 1px;
+      margin-top: 50px;
+    }
+
+    div.order-complete div.order-title {
+      background-color: var(--c-point);
+      padding: 10px;
+    }
+
+    div.order-complete div.order-content {
+      background-color: var(--white-f9);
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <h2>주문 완료</h2>
+    <div class="flow">
+      <p class="not-now">01 장바구니</p>
+      <p class="not-now arrow front"></p>
+      <p class="not-now">02 주문 / 결제</p>
+      <p class="now arrow back"></p>
+      <p class="now">03 주문완료</p>
+    </div>
+
+    <p>결제가 완료되어 주문이 접수됐습니다.</p>
+    <div class="order-complete">
+      <div class="order-title">이름</div>
+      <div class="order-content">홍길동</div>
+      <div class="order-title">주문번호</div>
+      <div class="order-content">20164-51154-32478</div>
+      <div class="order-title">주문일자</div>
+      <div class="order-content date"></div>
+    </div>
+
+    <script>
+      const now = new Date();
+
+      const year = now.getFullYear();
+
+      let month = now.getMonth() + 1;
+      month = month < 10 ? `0${month}` : `${month}`;
+
+      const day = now.getDate();
+
+      document.querySelector('div.order-content.date').textContent = `${year}-${month}-${day}`;
+    </script>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="../agreement/">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/order.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <title>주문하기 | KALL</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <h2>주문 / 결제</h2>
+    <div class="flow">
+      <p class="not-now">01 장바구니</p>
+      <p class="now arrow back"></p>
+      <p class="now">02 주문 / 결제</p>
+      <p class="now arrow front"></p>
+      <p class="not-now">03 주문완료</p>
+    </div>
+
+    <h3>구매자 정보</h3>
+    <div class="info-block">
+      <div class="line">
+        <div class="line-title">이름</div>
+        <div class="line-content">홍길동</div>
+      </div>
+      <div class="line">
+        <div class="line-title">이메일</div>
+        <div class="line-content">example@email.com</div>
+      </div>
+      <div class="line">
+        <div class="line-title">휴대폰 번호</div>
+        <div class="line-content">010-1234-5678 <button>수정</button></div>
+      </div>
+    </div>
+    <form action="./complete.html">
+      <h3>받는 사람 정보</h3>
+      <div class="info-block to">
+        <div class="line">
+          <div class="line-title"><label for="name">이름</label></div>
+          <div class="line-content"><input type="text" name="name" id="name" placeholder="받으실 분의 이름을 입력하세요" required>
+          </div>
+        </div>
+        <div class="line">
+          <div class="line-title"><label for="address">배송주소</label></div>
+          <div class="line-content"><input type="text" name="address" id="address" placeholder="배송 주소를 입력하세요" required>
+          </div>
+        </div>
+        <div class="line">
+          <div class="line-title"><label for="phoneNb">연락처</label></div>
+          <div class="line-content"><input type="text" name="phone" id="phoneNb" maxlength="11"
+              placeholder="'-'없이 입력 하세요" required>
+          </div>
+        </div>
+        <div class="line">
+          <div class="line-title"><label for="memo">배송시 요청사항</label></div>
+          <div class="line-content"><input type="text" name="memo" id="memo" placeholder="요청 사항을 입력해주세요" required></div>
+        </div>
+      </div>
+
+      <h3>결제 상품 목록</h3>
+      <div class="item-box">
+        <div>러블리 하트케이크 | 일반, 초코색, 원형</div>
+        <div>티아라 케이크 | 1호</div>
+      </div>
+
+      <h3>결제 정보</h3>
+      <div class="info-block pay">
+        <div class="line">
+          <div class="line-title">총상품가격</div>
+          <div class="line-content">75,000원</div>
+        </div>
+        <div class="line">
+          <div class="line-title">배송비</div>
+          <div class="line-content">3,000원</div>
+        </div>
+        <div class="line">
+          <div class="line-title">총결제금액</div>
+          <div class="line-content">78,000원</div>
+        </div>
+        <div class="line">
+          <div class="line-title">결제방법</div>
+          <div class="line-content">
+            <div>
+              <input type="radio" id="transfer" name="payment" value="transfer" disabled>
+              <label for="transfer">계좌이체</label>
+
+              <input type="radio" id="credit-card" name="payment" value="credit" checked>
+              <label for="credit-card">신용/체크카드</label>
+
+              <input type="radio" id="corporation-card" name="payment" value="corporation" disabled>
+              <label for="corporation-card">법인카드</label>
+
+              <input type="radio" id="phone" name="payment" value="phone" disabled>
+              <label for="phone">휴대폰</label>
+
+              <input type="radio" id="deposit-without-passbook" name="payment" value="depositWithout" disabled>
+              <label for="deposit-without-passbook">무통장입금(가상계좌)</label>
+            </div>
+            <div class="pay-info">
+              <div class="form-label">
+                <label for="card">카드번호</label>
+              </div>
+              <div class="form-input">
+                <input type="text" id="card" name="card[]" size="2" minlength="4" maxlength="4" required>
+                <input type="text" name="card[]" size="2" minlength="4" maxlength="4" required>
+                <input type="text" name="card[]" size="2" minlength="4" maxlength="4" required>
+                <input type="text" name="card[]" size="2" minlength="4" maxlength="4" required>
+              </div>
+              <div class="form-label">
+                <label for="period">유효기간</label>
+              </div>
+              <div class="form-input">
+                <input type="text" id="period" name="period[]" size="2" maxlength="2" placeholder="mm" required> /
+                <input type="text" name="period[]" size="2" maxlength="2" placeholder="yy" required>
+              </div>
+              <div class="form-label">
+                <label for="cvc">CVC</label>
+              </div>
+              <div class="form-input">
+                <input type="text" id="cvc" name="cvc" minlength="3" maxlength="3" required>
+              </div>
+              <input type="submit" id="button" hidden>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <label for="button">결제하기</label>
+    </form>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="../agreement/">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

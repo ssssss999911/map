@@ -1,0 +1,167 @@
+/* ==================== 마이 페이지 ==================== */
+main {
+  color: var(--black-3);
+  font-size: 1.2rem;
+}
+
+main>h2 {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333333;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+main h2 a{
+  color: black;
+  font-size: 1.2rem;
+}
+
+.oderlist {
+  height: 23px;
+}
+
+/*mmmmmmmmmmmm날짜 버튼 크기mmmmmmmmmmmmm*/
+
+.orderlist a,
+#ordersearch {
+  display: inline-block;
+  text-align: center;
+  border: solid 1px;
+  width: 50px;
+  color: var(--black-3);
+}
+
+.orderlist a:last-of-type {
+  width: 70px;
+}
+
+
+/*mmmmmmmmmmmm날짜 버튼 크기mmmmmmmmmmmmm*/
+/* mmmmmmmmmmmmmmmmm오더리스트mmmmmmmmmmmmmmm */
+
+.my_orderlist fieldset {
+  height: 300px;
+}
+
+.oderlist_date {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.oderlist_date>* {
+  margin: 10px;
+}
+
+.my_orderlist ul li {
+  text-align: center;
+}
+
+/* mmmmmmmmmmmmmmmmm오더리스트mmmmmmmmmmmmmmm */
+/* mmmmmmmmmm내역조회/취소/반품/교환mmmmmmmmmmm */
+.my_menu>ul>li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.my_menu>ul {
+  text-align: center;
+  background-color: var(--c-point);
+  margin-bottom: 10px;
+}
+
+.my_menu ul>li>a {
+  color: var(--black-3);
+}
+
+/* mmmmmmmmmmm하단 페이지 이동버튼mmmmmmmmmmmmmmmmmmm */
+
+div.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+div.pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  padding: 5px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 35px;
+}
+
+div.pagination a:hover,
+div.pagination a[data-current="true"] {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+div.pagination a.prev {
+  margin-right: 10px;
+}
+
+div.pagination a.next {
+  margin-left: 10px;
+}
+
+div.pagination a.first {
+  margin-right: 5px;
+}
+
+div.pagination a.last {
+  margin-left: 5px;
+}
+
+/* mmmmmmmmmmm하단 페이지 이동버튼mmmmmmmmmmmmmmmmmmm */
+
+/* mmmmmmmmmm주문상품정보창mmmmmmmmmmm */
+
+
+
+.my_orderpage {
+  margin: 30px 0;
+  border: solid 1px;
+  /* display: flex; */
+  text-align: center;
+}
+
+.my_orderpage>table {
+  width: 100%;
+}
+
+.my_orderpage>table>thead {
+  background-color: rgb(215, 230, 255);
+}
+
+.my_orderpage {
+  color: black;
+}
+
+.my_orderpage h3,
+.my_orderpage caption {
+  display: none;
+}
+
+.my_orderpage colgroup col:nth-child(3) {
+  width: 40%;
+}
+
+.message {
+  height: 200px;
+  line-height: 200px;
+}
+
+.my_orderpage tbody td {
+  height: 70px;
+}
+
+.gara td:not(.orderNb) {
+  border-bottom: 1px dashed #33333350;
+}

@@ -1,0 +1,219 @@
+/* ==================== 전체 레이아웃 ==================== */
+form.sighup-form {
+  width: 600px;
+  margin: 0 auto;
+  color: var(--black-3);
+}
+
+form.sighup-form legend {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+fieldset {
+  box-sizing: border-box;
+  border: none;
+}
+
+/* ==================== 필수 입력 ==================== */
+
+#required div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#required div:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+#required div:last-of-type {
+  margin-bottom: 20px;
+}
+
+#required div span {
+  margin: 0 5px;
+}
+
+#required div label {
+  width: 100px;
+  margin-right: 20px;
+}
+
+#required div input:focus,
+#required div.e-mail select:focus {
+  border-bottom: 2px solid var(--c-point-h);
+}
+
+#required div input {
+  all: unset;
+  flex: 1;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: var(--white-f9);
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+#required div.phone input {
+  text-align: center;
+}
+
+#required div.e-mail {
+  display: flex;
+  flex: 1;
+  margin-bottom: 0;
+  gap: 10px;
+}
+
+#required div.e-mail span {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+#required div.e-mail select {
+  all: unset;
+  border: 1px solid var(--white-e);
+  background-color: var(--white-e);
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  appearance: auto;
+  box-sizing: border-box;
+}
+
+#required div.home-address div {
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  gap: 10px;
+  flex: 1;
+}
+
+#required div.home-address button {
+  all: unset;
+  padding: 11px;
+  font-size: 1.2rem;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  cursor: pointer;
+}
+
+#required div.home-address button:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+/* ==================== 선택 입력 ==================== */
+#choose div {
+  display: flex;
+  align-items: center;
+}
+
+#choose div:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+#choose div p {
+  width: 100px;
+  margin-right: 20px;
+}
+
+#choose div select {
+  all: unset;
+  appearance: auto;
+  border: 1px solid var(--white-e);
+  background-color: var(--white-e);
+  padding: 10px;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+#choose div select:focus {
+  border: 1px solid var(--c-point);
+}
+
+#choose div select:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+#choose div input[type="checkbox"]+label {
+  background-color: var(--white-e);
+  padding: 10px;
+  font-size: 1.2rem;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#choose>div div.checkboxs {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#choose>div div.checkboxs label {
+  flex-grow: 1;
+  text-align: center;
+  align-self: stretch;
+}
+
+#choose>div div.checkboxs label:hover {
+  background-color: var(--white-d);
+}
+
+#choose div input[type="checkbox"]:checked+label {
+  background-color: var(--c-point);
+  color: var(--black-3);
+}
+
+#choose>div.visit-root {
+  margin-bottom: 20px;
+}
+
+/* ==================== 약관 동의 ==================== */
+#agree a {
+  color: var(--c-link);
+}
+
+#agree a:hover {
+  color: var(--c-link-h);
+  text-decoration: underline;
+}
+
+#agree div label {
+  display: block;
+}
+
+#agree div label:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+/*회원가입 버튼 */
+/*백그라운드 색 바꾸기 */
+
+#join {
+  all: unset;
+  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#join:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}

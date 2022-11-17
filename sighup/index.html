@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/sighup.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <meta name="description" content="주문제작 케이크를 판매하는 KALL입니다.">
+  <meta name="keywords" content="케이크, 주문제작, cake">
+  <meta name="author" content="KALL">
+  <meta name="generator" content="MS VS CODE">
+  <meta name="robots" content="index, follow">
+
+  <title>회원가입 | KALL</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- ==================== 윤지 코드 ==================== -->
+    <form action="./complete.html" name="memberJoin" class="sighup-form">
+      <fieldset id="required">
+        <legend>필수입력 사항 </legend>
+        <div>
+          <label for="name"><strong>이름</strong></label>
+          <input id="name" type="text" name="name" placeholder="이름을 입력해 주세요" required>
+        </div>
+
+        <div>
+          <label for="id"><strong>아이디</strong></label>
+          <input id="id" type="text" name="id" placeholder="사용하실 아이디를 입력해주세요 " required>
+        </div>
+        <!-- 아이디 확인 어캐하는 지 모름,,  -->
+
+        <div>
+          <label for="password"><strong>비밀번호</strong> </label>
+          <input id="password" type="password" name="psw" placeholder="최소 7자리 이상 " minlength="7" required>
+        </div>
+
+        <div>
+          <label for="passwordck"><strong>비밀번호 확인</strong> </label>
+          <input id="passwordck" type="password" name="psw" minlength="7" required>
+        </div>
+
+        <!-- 비밀번호랑 비밀번호 확인 같아야 넘어가는건 어캐하는지 모름,,  -->
+
+        <div class="phone">
+          <label for="phone">
+            <strong>전화번호</strong>
+          </label>
+          <input type="text" name="first_phone_num" value="010" minlength="3" maxlength="3" size="1" readonly required>
+          <span>-</span>
+          <input id="phone" type="text" name="mid_phone_num" minlength="3" maxlength="4" size="1" required>
+          <span>-</span>
+          <input type="text" name="last_phone_num" minlength="4" maxlength="4" size="1" required>
+        </div>
+
+        <div>
+          <label for="e-mail">
+            <strong>이메일</strong>
+          </label>
+          <div class="e-mail">
+            <input id="e-mail" type="text" placeholder="이메일" size="5" required>
+            <span>@</span>
+            <input type="text" name="emailBack" placeholder="직접입력" size="1">
+            <select class="form-control empty" required>
+              <option value="none" disabled selected>직접입력</option>
+              <option value="naver.com">naver.com</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="daum.net">daum.net</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="nate.com">nate.com</option>
+              <option value="hotmail.com">hotmail.com</option>
+              <option value="outlook.com">outlook.com</option>
+              <option value="icloud.com">icloud.com</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="home-address">
+          <label for="postal-code">주소</label>
+          <div>
+            <input class="postal-code" type="text" name="postalCode" id="postal-code" readonly required>
+            <button type="button">우편번호 검색</button>
+            <input type="text" name="address[]" readonly required>
+            <input type="text" name="address[]" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="choose">
+        <legend>선택사항 </legend>
+
+        <div>
+          <p>생년월일</p>
+          <select name="year_birth" id="year_birth">
+            <!-- option[value=$@-1933]{$@-1933}*90 -->
+            <option value="none" selected disabled>연도</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            <option value="1990">1990</option>
+            <option value="1989">1989</option>
+            <option value="1988">1988</option>
+            <option value="1987">1987</option>
+            <option value="1986">1986</option>
+            <option value="1985">1985</option>
+            <option value="1984">1984</option>
+            <option value="1983">1983</option>
+            <option value="1982">1982</option>
+            <option value="1981">1981</option>
+            <option value="1980">1980</option>
+            <option value="1979">1979</option>
+            <option value="1978">1978</option>
+            <option value="1977">1977</option>
+            <option value="1976">1976</option>
+            <option value="1975">1975</option>
+            <option value="1974">1974</option>
+            <option value="1973">1973</option>
+            <option value="1972">1972</option>
+            <option value="1971">1971</option>
+            <option value="1970">1970</option>
+            <option value="1969">1969</option>
+            <option value="1968">1968</option>
+            <option value="1967">1967</option>
+            <option value="1966">1966</option>
+            <option value="1965">1965</option>
+            <option value="1964">1964</option>
+            <option value="1963">1963</option>
+            <option value="1962">1962</option>
+            <option value="1961">1961</option>
+            <option value="1960">1960</option>
+            <option value="1959">1959</option>
+            <option value="1958">1958</option>
+            <option value="1957">1957</option>
+            <option value="1956">1956</option>
+            <option value="1955">1955</option>
+            <option value="1954">1954</option>
+            <option value="1953">1953</option>
+            <option value="1952">1952</option>
+            <option value="1951">1951</option>
+            <option value="1950">1950</option>
+            <option value="1949">1949</option>
+            <option value="1948">1948</option>
+            <option value="1947">1947</option>
+            <option value="1946">1946</option>
+            <option value="1945">1945</option>
+            <option value="1944">1944</option>
+            <option value="1943">1943</option>
+            <option value="1942">1942</option>
+            <option value="1941">1941</option>
+            <option value="1940">1940</option>
+            <option value="1939">1939</option>
+            <option value="1938">1938</option>
+            <option value="1937">1937</option>
+            <option value="1936">1936</option>
+            <option value="1935">1935</option>
+            <option value="1934">1934</option>
+            <option value="1933">1933</option>
+          </select>
+
+          <select name="month_birth" id="month_birth">
+            <option value="none" selected disabled>월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+
+          <select name="day_birth" id="day_birth">
+            <option value="none" selected disabled>일</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+        </div>
+
+        <div class="visit-root">
+          <p>방문경로</p>
+          <div class="checkboxs">
+            <input id="blog-cafe" name="visit-root" value="blogCafe" type="checkbox" hidden>
+            <label for="blog-cafe">블로그, 카페</label>
+
+            <input id="friend" name="visit-root" value="friend" type="checkbox" hidden>
+            <label for="friend">지인</label>
+
+            <input id="sns" name="visit-root" value="sns" type="checkbox" hidden>
+            <label for="sns">sns</label>
+
+            <input id="search" name="visit-root" value="search" type="checkbox" hidden>
+            <label for="search">포털검색</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="agree">
+        <legend>약관동의</legend>
+        <div>
+          <label>
+            <input type="checkbox" required> 만 14세 이상입니다. (필수)
+          </label>
+
+          <label>
+            <input type="checkbox" required>
+            <a href="../agreement/">이용약관(필수)</a>
+          </label>
+
+          <label>
+            <input type="checkbox" required>
+            <a href="../privacy/">개인정보수집 및 이용동의(필수)</a>
+          </label>
+
+          <label>
+            <input type="checkbox">
+            <a href="">이벤트, 쿠폰,특가알림 메일 및 SMS 등 수신 (선택)</a>
+          </label>
+        </div>
+        <input type="submit" id="join" value="회원가입하기">
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="../agreement">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
